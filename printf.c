@@ -1,14 +1,13 @@
-#include "print.h"
+#include "main.h"
 
 
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, len = 0, k, j;
+	int i = 0, len = 0, k, j, counter = 0;	
 	char *dest = NULL;
 	char *argStr;
-	char *argChar;
-
+	
 	while (format[len] != '\0')
 		len++;
 
@@ -24,12 +23,17 @@ int _printf(const char *format, ...)
 			argStr = malloc(sizeof(char) * 2);
 			argStr[0] = (char)va_arg(ap, int);
 			argStr[1] = '\0';
+			_count(&counter, argStr);
 			_sprintf(argStr);
 			free(argStr);
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
+			argStr = va_arg(ap, char *);
+            		_count(&counter, argStr);
+            		_sprintf(argStr);
+            		i += 2;
 		}
 		else
 		{
@@ -46,7 +50,10 @@ int _printf(const char *format, ...)
 				}
 			}
 			dest[k] = '\0';
+			_count(&counter, dest);
 			_sprintf(dest);
 		}
 	}
+
+	return(counter);
 }
