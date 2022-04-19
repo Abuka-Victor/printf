@@ -1,0 +1,46 @@
+.\" ALX printf Project Man Page
+.TH printf 1 "April 2022" "Printf Project" "ALX AFRICA"
+.SH NAME
+.P
+_printf() 
+.SH SYNOPSIS
+.P
+_printf() - %[dcisbuxop]
+.SH DESCRIPTION
+.P
+prints strings to the stdout along with format specifiers for appropriate values
+.SH OPTIONS
+.SS Format Specifiers
+.P
+d - decimal digits
+.P
+c - Characters
+.P
+i - Integers
+.P
+s - Strings
+.P
+b - represents undefined specifiers and would behave just as printf(3)
+.P
+u - Unsigned
+.P
+x - Hexadecimal
+.P
+o - Unsigned Octal
+.P
+p - Addresses
+.SH EXAMPLES
+.RS
+_printf("Some String %s", str);
+format specifier - %s
+str - Some variable of type char *
+.RE
+.SH EXIT VALUES
+.P
+returns 1 if malloc operation is unsuccessful
+.SH AUTHORS
+.P
+Written by \fBABUKA VICTOR\fR and \fBALABI KHALID\fR.
+.SH SEE ALSO
+.P
+MAN printf(3)
