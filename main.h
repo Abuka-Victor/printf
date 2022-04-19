@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdarg.h>
-#include <limit.h>
+#include <limits.h>
 
 void _sprintf(const char *str);
 int _printf(const char *format, ...);
