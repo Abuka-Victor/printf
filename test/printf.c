@@ -45,6 +45,22 @@ int _printf(const char *format, ...)
             		_sprintf(argStr);
             		i += 2;
 		}
+		else if (format[i] == '%' && format[i + 1] == 'i')
+		{
+			argStr = _itoa(va_arg(ap, int));
+			_count(&counter, argStr);
+			_sprintf(argStr);
+			free(argStr);
+			i += 2;
+		}
+		else if (format[i] == '%' && format[i + 1] == 'd')
+		{
+			argStr = _itoa(va_arg(ap, int));
+			_count(&counter, argStr);
+			_sprintf(argStr);
+			free(argStr);
+			i += 2;
+		}
 		else
 		{
 			for (j = i, k = 0; format[j] != '\0' ; k++, j++, i++)
