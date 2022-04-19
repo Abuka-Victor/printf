@@ -1,7 +1,7 @@
 #include "print.h"
 
 
-int _sprintf(const char *str)
+void _sprintf(const char *str)
 {
 	int i, len = 0;
 	char *newstr = NULL;
@@ -14,7 +14,7 @@ int _sprintf(const char *str)
 	newstr = malloc(sizeof(char) * (len + 1));
 
 	if (newstr == NULL)
-		return (1);
+		exit (1);
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -24,5 +24,4 @@ int _sprintf(const char *str)
 
 	write(1, newstr, len);
 	free(newstr);
-	return (0);
 }

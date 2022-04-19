@@ -7,7 +7,7 @@
 #include <stdarg.h>
 #include <limit.h>
 
-int _sprintf(const char *str);
+void _sprintf(const char *str);
 int _printf(const char *format, ...);
 void _count(int *ptr, char *str);
 
