@@ -28,8 +28,22 @@ int _printf(const char *format, ...)
 			free(argStr);
 			i += 2;
 		}
+		else if (format[i] == '%' && format[i + 1] == '%')
+		{
+			argStr = malloc(sizeof(char) * 2);
+			argStr[0] = '%';
+			argStr[1] = '\0';
+			_count(&counter, argStr);
+			_sprintf(argStr);
+			free(argStr);
+			i += 2;
+		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
+			argStr = va_arg(ap, char *);
+            		_count(&counter, argStr);
+            		_sprintf(argStr);
+            		i += 2;
 		}
 		else
 		{
