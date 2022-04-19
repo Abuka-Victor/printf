@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _count - count the string 
  * @ptr: counter

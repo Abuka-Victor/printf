@@ -1,4 +1,4 @@
-#include "print.h"
+#include "main.h"
 
 
 void _sprintf(const char *str)
