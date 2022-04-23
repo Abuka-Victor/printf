@@ -5,7 +5,6 @@
  * @ptr: counter
  * @str: string to count
  */
-
 void _count(int *ptr, char *str)
 {
 	int i;
