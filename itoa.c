@@ -9,6 +9,7 @@ char *_itoa(int num)
 	num *= num < 0 ? -1 : 1;
 
 	keep = num;
+	
 
 	while (keep > 9)
 	{
