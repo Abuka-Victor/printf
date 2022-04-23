@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 void _sprintf(const char *str)
 {
 	int i, len = 0;
