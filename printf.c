@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	while (format[len] != '\0')
 		len++;
 
+	
 	dest = malloc(sizeof(char) * len);
 	if (dest == NULL)
 		exit(1);
