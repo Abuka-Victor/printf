@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 	dest = malloc(sizeof(char) * len);
 	if (dest == NULL)
 		exit(1);
+	
 
 	va_start(ap, format);
 	while (format[i] != '\0')
